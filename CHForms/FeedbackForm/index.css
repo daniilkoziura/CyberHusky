@@ -1,0 +1,136 @@
+@import url(https://fonts.googleapis.com/css?family=Iceland);
+
+body {
+    display: grid;
+    place-items: center;
+    background: linear-gradient(180deg, #494947 0%, #747476 100%) no-repeat;
+    font-family: 'Iceland', serif;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    color: aliceblue;
+}
+
+@property --hue {
+    syntax: '<integer>';
+    inherits: true;
+    initial-value: 0;
+}
+
+@property --deg {
+    syntax: '<angle>';
+    inherits: true;
+    initial-value: 0deg;
+}
+
+@keyframes rotate-container {
+    0% {
+        --hue: 0;
+        --deg: 0deg;
+    }
+    100% {
+        --hue: 360;
+        --deg: 360deg;
+    }
+}
+
+#form-content {
+    display: block;
+    padding: 4%;
+    margin: 5%;
+    border-image-source: linear-gradient(90deg, #80fffd 1%, #fff700 99%);
+    animation: rotate-container 4s linear infinite;
+    border: 2px solid transparent;
+    border-image-slice: 1;
+    border-image-width: 4px;
+    border-image-source:
+        conic-gradient(
+                from var(--deg),
+                hsla(calc(var(--hue) + 180),100%,75%,0.0) 33%,
+                hsla(calc(var(--hue) + 180),100%,75%,0.5) 66%,
+                hsla(calc(var(--hue) + 360),100%,60%,1.0) 100%
+        );
+}
+
+.cyber-label {
+    font-size: 16px;
+}
+
+@keyframes rotate {
+    0% {
+        --hue: 0;
+        --deg: 0deg;
+    }
+    100% {
+        --hue: 360;
+        --deg: 360deg;
+    }
+}
+
+.cyber-input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    box-sizing: border-box;
+    border-image-source: linear-gradient(90deg, #80fffd 1%, #fff700 99%);
+    animation: rotate 3s linear infinite;
+    border: 2px solid transparent;
+    border-image-slice: 1;
+    border-image-width: 4px;
+    border-image-source:
+        conic-gradient(
+                from var(--deg),
+                hsla(calc(var(--hue) + 180),100%,75%,0.0) 33%,
+                hsla(calc(var(--hue) + 180),100%,75%,0.5) 66%,
+                hsla(calc(var(--hue) + 360),100%,60%,1.0) 100%
+        );
+}
+
+.cyber-submit-input {
+    cursor: pointer;
+    font-family: 'Iceland', serif;
+    border: 2px solid transparent;
+    border-image-slice: 1;
+    border-image-width: 2px;
+    animation: rotate 3s linear infinite;
+    border-image-source:
+        conic-gradient(
+                from var(--deg),
+                hsla(calc(var(--hue) + 180),100%,75%,0.0) 33%,
+                hsla(calc(var(--hue) + 180),100%,75%,0.5) 66%,
+                hsla(calc(var(--hue) + 360),100%,60%,1.0) 100%
+        );
+    background: linear-gradient(90deg, #80fffd 1%, #fff700 99%);
+    color: #747476;
+}
+
+div.wrapper {
+}
+div.wrap-left-content {
+    cursor: pointer;
+    float: left;
+    width: 49%;
+    min-height: 50vh;
+}
+div.wrap-right-content {
+    float: right;
+    width: 49%;
+    min-height: 50vh;
+
+}
+
+.text-action {
+    color: aliceblue;
+}
+.text-action > span {
+    color: #80fffd;
+}
+
+
+
+
+
+
+
+
